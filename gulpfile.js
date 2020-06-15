@@ -21,9 +21,6 @@ const NODE_ENV = process.env.NODE_ENV
 
 
 gulp.task('test:coverage', function(done) {
-  // This doesn't really do test coverage. It just runs the unit tests. We need to use
-  // a replacement for istanbul for getting code coverage.
-  // Tracked by https://jira.nordstrom.net/browse/OMNI-5765
   return gulp.src([UNIT_TEST_MAIN])
   .pipe(mocha({require: [TEST_COMMON]}))
   .once('error', function (err) {
