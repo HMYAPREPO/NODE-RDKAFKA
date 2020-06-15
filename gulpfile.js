@@ -16,10 +16,6 @@ const SERVER_WATCH_FILES = [ROUTES_FILES, SRC_FILES, SERVER_FILE, APP_FILE, COMM
 const TEST_COVERAGE_MIN = 80
 const NODE_ENV = process.env.NODE_ENV
 
-/
-
-
-
 gulp.task('test:coverage', function(done) {
   return gulp.src([UNIT_TEST_MAIN])
   .pipe(mocha({require: [TEST_COMMON]}))
